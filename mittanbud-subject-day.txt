@@ -1,0 +1,176 @@
+General improvement in my front end skills, bootstraps available classes seems to be a gap in my knowledge
+JavaScript in general.
+
+Learn more about pros/cons with React vs. Angular/Vue/other. Learn more about React in general.
+Just general things surrounding React to get tips and pointers from the more experienced staff.
+I would also like to hear more about what other frameworks might potentially be used for future projects.
+
+React
+Good/clean code practice, functional code, SEO, reducing, context, hooks
+more about hooks
+
+
+---------------------------------------------
+
+CSS
+----------
+Bootstrap (sources) ,Foundation , TailWind (klucz francuski, zmiana templau aby uzyskać zmianę wizualną - zaprzeczenie ideii ) , Semantic UI,  Bulma,
+https://github.com/troxler/awesome-css-frameworks
+
+-> https://watercss.kognise.dev/
+-> https://animate.style/
+
+
+
+Please use BEM
+- BEM mixins   (do not attach HTML structure into BEM structure
+https://gist.github.com/Bigismall/8472451f82d77dd380447bea555be163
+
+
+
+Please use SCSS
+ - https://www.sassmeister.com/
+- IDE
+- http://koala-app.com/
+
+
+CSS variables - presentation STP
+https://docs.google.com/presentation/d/1XffJxDlG5XSxT8MnXfQKUuf0xQ-MAxF9Bclvy6Fa3R8/edit?usp=sharing
+
+
+New features in CSS ?
+
+css variables
+css scroll-behavior
+css scroll-snap
+css grid / css subgrid
+css grid masonry layout
+css  Flexbox gaps
+
+
+css display: contents
+object-fit: cover;
+css object model
+css paint api
+
+css content-visibility https://developer.mozilla.org/en-US/docs/Web/CSS/content-visibility
+css aspect-ratio https://developer.mozilla.org/en-US/docs/Web/CSS/aspect-ratio
+
+
+
+
+
+
+JavaScript
+----------
+JS in a big picture
+https://github.com/coodict/javascript-in-one-pic
+
+Books
+https://github.com/chocopuff2020/javascript-ebooks-1
+https://github.com/chocopuff2020/javascript-ebooks-1/blob/master/%5BJavaScript%20The%20Good%20Parts%201st%20Edition%20by%20Douglas%20Crockford%20-%202008%5D.pdf
+http://sd.blackball.lv/library/JavaScript_Patterns_%282010%29.pdf
+
+
+Design patterns (solwit prezentations)  - https://github.com/Bigismall/js-basic
+
+
+JS Interview questions
+https://dev.to/macmacky/70-javascript-interview-questions-5gfi
+https://skilled.dev/course/javascript-interview-questions
+
+JS Killer question
+
+
+JS Speach
+https://gist.github.com/Bigismall/c6ab430bc09cff18f5bf28bf83fa9996
+https://bigismall.github.io/face-detection/
+https://github.com/Bigismall/face-detection
+
+
+Intersection Observer API (other observers)
+https://developer.mozilla.org/en-US/docs/Web/API/Resize_Observer_API
+https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API
+https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver
+
+
+ECMAScript modules in browsers (https://github.com/evanw/esbuild)
+ES6 (ES2015)  (const , arrow functions )   - https://github.com/Bigismall/js-path-es-6
+Shape Detection API  https://web.dev/shape-detection/
+
+
+https://frontendfront.com/
+
+
+TypeScript
+----------
+ https://www.typescriptlang.org/docs/
+
+ - typescript playground  (https://www.typescriptlang.org/play)   (https://www.typescriptlang.org/play?target=1&jsx=0#code/MYGwhgzhAEC2CWAXRYB2AjArgE2gbwFgAoaaAB03RHmGlTFgFMAuaCRAJ3lQHNjTgAe1TsOmYIkEcAFAEp8-UtEQALeBAB09JtAC80AEQBZAIIHFAX2LEVjECEFyFJaB0aJMHVNAAGACTsHaAASPFV1LQZGCx9iKyI46wSiIRFEODA9OkYAdzgkFAwcOWJUiEEQRg0HHmlYMA1be0dZWWIgA)
+ - pros/cons  (IDE get more smart, type checking, compilation phase)
+
+
+JavaScript Future
+-----------------
+ The Third Age of JavaScript
+ https://www.swyx.io/js-third-age/
+
+	- Parcel
+	https://parceljs.org/
+
+ - Rome  ( one tool for everything )
+ https://rome.tools/
+
+  - WMR
+  https://github.com/preactjs/wmr
+
+  - Estrella
+  https://github.com/rsms/estrella
+
+
+
+
+React / Vue / Angular / Svelte / https://preactjs.com/
+---------------------
+- react at very low level
+- template syntax  ( LIST/ CONDITIONAL RENDERING https://vuejs.org/v2/guide/list.html  vs react loops https://pl.reactjs.org/docs/lists-and-keys.html   , https://vuejs.org/v2/guide/conditional.html ,https://pl.reactjs.org/docs/conditional-rendering.html )
+
+- Angular  (TS, high entry level, object oriented  )
+- command line tools ( https://cli.vuejs.org/ , https://create-react-app.dev/ , https://svelte.dev/, https://cli.angular.io/ )
+
+
+React
+-----
+- one way data flow (react,vue)  (Angular nGModel - 2 way flow )
+- do not need redux   / context might be enough /   spaceship context
+- hooks  (go through),   (https://github.com/rehooks/awesome-react-hooks)
+- useEffect() ( lifecycle ), useReducer()  (state machine) //code example
+- state machnige instead of booleans
+- Memo
+
+
+
+//React server components
+https://reactjs.org/blog/2020/12/21/data-fetching-with-react-server-components.html
+
+
+https://frontendmasters.com/
+
+React Training - 19.10.2020 Botega
+- https://gist.github.com/Bigismall/fab256be21a90227d3746c239cdb615e
+
+
+
+Questions  ?
+
+
+React Native
+------------
+how it differs from React (View part)
+how to start, expo
+
+
+
+
+
+
