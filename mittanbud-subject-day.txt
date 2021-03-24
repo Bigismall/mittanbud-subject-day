@@ -84,6 +84,7 @@ JS Killer question
 
 JS Speach
 https://gist.github.com/Bigismall/c6ab430bc09cff18f5bf28bf83fa9996
+https://codepen.io/Bigismall/pen/rNjOVyr
 https://bigismall.github.io/face-detection/
 https://github.com/Bigismall/face-detection
 
@@ -96,7 +97,6 @@ https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver
 
 ECMAScript modules in browsers (https://github.com/evanw/esbuild)
 ES6 (ES2015)  (const , arrow functions )   - https://github.com/Bigismall/js-path-es-6
-Shape Detection API  https://web.dev/shape-detection/
 
 
 https://frontendfront.com/
@@ -106,7 +106,8 @@ TypeScript
 ----------
  https://www.typescriptlang.org/docs/
 
- - typescript playground  (https://www.typescriptlang.org/play)   (https://www.typescriptlang.org/play?target=1&jsx=0#code/MYGwhgzhAEC2CWAXRYB2AjArgE2gbwFgAoaaAB03RHmGlTFgFMAuaCRAJ3lQHNjTgAe1TsOmYIkEcAFAEp8-UtEQALeBAB09JtAC80AEQBZAIIHFAX2LEVjECEFyFJaB0aJMHVNAAGACTsHaAASPFV1LQZGCx9iKyI46wSiIRFEODA9OkYAdzgkFAwcOWJUiEEQRg0HHmlYMA1be0dZWWIgA)
+ - typescript playground  (https://www.typescriptlang.org/play)
+  (https://www.typescriptlang.org/play?target=1&jsx=0#code/MYGwhgzhAEC2CWAXRYB2AjArgE2gbwFgAoaaAB03RHmGlTFgFMAuaCRAJ3lQHNjTgAe1TsOmYIkEcAFAEp8-UtEQALeBAB09JtAC80AEQBZAIIHFAX2LEVjECEFyFJaB0aJMHVNAAGACTsHaAASPFV1LQZGCx9iKyI46wSiIRFEODA9OkYAdzgkFAwcOWJUiEEQRg0HHmlYMA1be0dZWWIgA)
  - pros/cons  (IDE get more smart, type checking, compilation phase)
 
 
@@ -114,6 +115,9 @@ JavaScript Future
 -----------------
  The Third Age of JavaScript
  https://www.swyx.io/js-third-age/
+
+-  ESBuild
+https://esbuild.github.io/
 
 	- Parcel
 	https://parceljs.org/
@@ -130,9 +134,9 @@ JavaScript Future
 
 
 
-React / Vue / Angular / Svelte / https://preactjs.com/
+React / Vue / Angular / Svelte /
 ---------------------
-- react at very low level
+- react, very low entry level
 - template syntax  ( LIST/ CONDITIONAL RENDERING https://vuejs.org/v2/guide/list.html  vs react loops https://pl.reactjs.org/docs/lists-and-keys.html   , https://vuejs.org/v2/guide/conditional.html ,https://pl.reactjs.org/docs/conditional-rendering.html )
 
 - Angular  (TS, high entry level, object oriented  )
@@ -145,7 +149,7 @@ React
 - do not need redux   / context might be enough /   spaceship context
 - hooks  (go through),   (https://github.com/rehooks/awesome-react-hooks)
 - useEffect() ( lifecycle ), useReducer()  (state machine) //code example
-- state machnige instead of booleans
+- state machine instead of booleans
 - Memo
 
 

@@ -170,16 +170,17 @@ See presentation: (https://docs.google.com/presentation/d/1XffJxDlG5XSxT8MnXfQKU
 
 ---
 
-### My Book 
+### My Book
 
 JavaScript basics: (https://github.com/Bigismall/js-basic)
 
 ---
 
-
 #### Timeout zero
 
-Skoro wiemy już, że możemy symulować asynchroniczność, to chcielibyśmy realizować to natychmiast, pomijając jakiekolwiek opóźnienie. Ustawiamy zatem 0ms, w nadziei, że przekazana funkcja uruchomi się  "od razu".  Nawet jednak ustawienie 0ms nie zmienia sposobu działania JavaScript.  Nie jest bowiem tak, że JS porzuci wszystkie inne zadania i zajmie się  naszym. Obowiązują reguły ustawiania się w kolejce.  Nie uruchomi tez naszego zadania w osobnym wątku, bo nie potrafi.
+Skoro wiemy już, że możemy symulować asynchroniczność, to chcielibyśmy realizować to natychmiast, pomijając jakiekolwiek opóźnienie. Ustawiamy zatem 0ms, w
+nadziei, że przekazana funkcja uruchomi się  "od razu". Nawet jednak ustawienie 0ms nie zmienia sposobu działania JavaScript. Nie jest bowiem tak, że JS porzuci
+wszystkie inne zadania i zajmie się naszym. Obowiązują reguły ustawiania się w kolejce. Nie uruchomi tez naszego zadania w osobnym wątku, bo nie potrafi.
 
 ---
 
@@ -188,19 +189,19 @@ Skoro wiemy już, że możemy symulować asynchroniczność, to chcielibyśmy re
 ```js
 (function () {
 
-    console.log('this is the start');
+  console.log('this is the start');
 
-    setTimeout(function callBackOne() {
-        console.log('this is a msg from call back one');
-    });
+  setTimeout(function callBackOne () {
+    console.log('this is a msg from call back one');
+  });
 
-    console.log('this is just a message');
+  console.log('this is just a message');
 
-    setTimeout(function callBackTwo() {
-        console.log('this is a msg from call back two');
-    }, 0);
+  setTimeout(function callBackTwo () {
+    console.log('this is a msg from call back two');
+  }, 0);
 
-    console.log('this is the end');
+  console.log('this is the end');
 })();
 ```
 
@@ -218,9 +219,10 @@ this is a msg from call back one
 this is a msg from call back two
 ```
 
-Jak widać mimo iż  `callBackOne()`  i `callBackTwo()` zostały wywołane z parametrem 0ms \(lub jego brakiem\), ich wykonanie zostało odłożone na koniec kolejki \(przy czym zachowana została kolejność, wynikająca z 0ms\)
+As you can see  `callBackOne()`  and `callBackTwo()`  were called with `0ms` param (or without any parameter), and their execution was moved to the end of the
+queue.
 
-Intuicyjnie zatem wykonie `setTimeOut(function,0)`  mówi - wykonaj tą funkcję tak szybko jak będzie to tylko możliwe.
+So  `setTimeOut(function,0)`  says - *execute this function as soon as it is possible*.
 
 
 ---
@@ -231,16 +233,15 @@ Intuicyjnie zatem wykonie `setTimeOut(function,0)`  mówi - wykonaj tą funkcję
 
 #### TimeOut Sort
 
-
 ```js
 var numbers = [38, 43, 33, 43, 27, 20, 33, 17, 49, 11, 30, 27, 35, 42, 14, 32, 44, 44, 16, 44];
 
 numbers.forEach(function (number) {
-    (function (number) {
-        setTimeout(function () {
-            console.log(number)
-        }, number);
-    }(number));
+  (function (number) {
+    setTimeout(function () {
+      console.log(number)
+    }, number);
+  }(number));
 });
 ```
 
@@ -251,7 +252,7 @@ numbers.forEach(function (number) {
 #### Automatic type conversion
 
 ```js
-console.log([1,5,20,10].sort()) //[ 1, 10, 20, 5 ]
+console.log([1, 5, 20, 10].sort()) //[ 1, 10, 20, 5 ]
 ```
 
 [https://codepen.io/Bigismall/pen/gRMPye](https://codepen.io/Bigismall/pen/gRMPye)
@@ -274,7 +275,7 @@ var a = 0 * 1,
 
 console.log(a, b);      //0 -0
 console.log(a === b);   //true
-console.log(1/a === 1/b);   //false
+console.log(1 / a === 1 / b);   //false
 ```
 
 [https://codepen.io/Bigismall/pen/XgKXwb](https://codepen.io/Bigismall/pen/XgKXwb)
@@ -332,6 +333,297 @@ console.log(Math.min()); // Infinity
 ---
 
 ### JS killer question
+
+Define the `even` method. Called on given array it should return just *even* numbers
+
+```js
+[1, 2, 3, 4, 5, 6, 7, 8, 9].even()  // 2,4,6,8
+```
+
+---
+
+```js
+
+if (!Array.prototype.even) {
+  // won't work because of arrow function
+  //Array.prototype.even = () => this.filter((e) => e % 2==0);
+  Array.prototype.even = function () {
+    return this.filter((e) => e % 2 == 0);
+  };
+}
+
+console.log([1, 2, 3, 4, 5, 6, 7, 8, 9, 0].even());
+```
+
+---
+
+### Awesome JavaScript
+
+https://developer.mozilla.org/en-US/docs/Web/API
+
+---
+
+![WEB APIS](assets/web_apis.png)
+
+---
+
+#### Speach API
+
+- https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API
+- https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance
+- https://gist.github.com/Bigismall/c6ab430bc09cff18f5bf28bf83fa9996
+- https://codepen.io/Bigismall/pen/rNjOVyr
+
+---
+
+```js
+
+document.querySelector("#magic").addEventListener("click", () => {
+  const paragraphs = [...document.querySelectorAll("#article p")];
+  const text = paragraphs.map((paragraph) => paragraph.innerText);
+  const speechUtterance = new SpeechSynthesisUtterance();
+  speechUtterance.lang = "pl";
+  speechSynthesis.cancel();
+
+  function speak (paragraphs) {
+    const paragraph = paragraphs.shift();
+    if (paragraph) {
+      speechUtterance.text = paragraph;
+      speechSynthesis.speak(speechUtterance);
+      speechUtterance.onend = () => speak(paragraphs);
+    } else {
+      speechUtterance.onend = null;
+    }
+  }
+
+  speak(text);
+});
+
+```
+
+---
+
+#### Shape (Text/BarCode/Face) Detection API
+
+- https://wicg.github.io/shape-detection-api/
+- https://developer.mozilla.org/en-US/docs/Web/API/Barcode_Detection_API
+
+- https://bigismall.github.io/face-detection/
+- https://github.com/Bigismall/face-detection
+
+---
+
+#### Observers
+
+- https://developer.mozilla.org/en-US/docs/Web/API/Resize_Observer_API
+- https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API
+- https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver
+
+---
+
+#### EcmaScript modules
+
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules
+
+---
+
+```html
+
+<script type="module">
+  import detectFace from "./js/detect.mjs";
+  import drawFace from "./js/canvas.mjs";
+  import drawSticker from "./js/stickers.mjs";
+  import initControls, {
+    getCurrentSticker,
+    displayLandmarks
+  } from "./js/controls.mjs";
+
+</script>
+```
+
+---
+
+```js
+const options = {
+  fastMode        : true,
+  maxDetectedFaces: 10,
+};
+
+async function detectFace (image) {
+  const bitmap = await createImageBitmap(image);
+  const detector = new window.FaceDetector(options);
+  const detection = await detector.detect(bitmap);
+  return {bitmap, detection};
+}
+
+export default detectFace;
+```
+
+---
+
+#### Ecmascript 6 and later...
+
+https://github.com/Bigismall/js-path-es-6/blob/master/SUMMARY.md
+
+Do you want to be up to date? https://frontendfront.com/
+
+
+---
+
+## TypeScript
+
+---
+
+Docs
+
+- https://www.typescriptlang.org/docs/
+
+Playground
+
+- [https://www.typescriptlang.org/play](https://www.typescriptlang.org/play?target=1&jsx=0#code/MYGwhgzhAEC2CWAXRYB2AjArgE2gbwFgAoaaAB03RHmGlTFgFMAuaCRAJ3lQHNjTgAe1TsOmYIkEcAFAEp8-UtEQALeBAB09JtAC80AEQBZAIIHFAX2LEVjECEFyFJaB0aJMHVNAAGACTsHaAASPFV1LQZGCx9iKyI46wSiIRFEODA9OkYAdzgkFAwcOWJUiEEQRg0HHmlYMA1be0dZWWIgA)
+
+---
+
+```ts
+
+import React from 'react'
+
+type ToggleType = readonly [boolean, () => void, () => void, () => void]
+
+/**
+ * @method useBoolean
+ *
+ * @param initialValue - default set to false
+ * @returns [value, setTrue, setFalse, toggle] methods
+ *
+ */
+export const useBoolean = (initialValue: boolean | undefined = false): ToggleType => {
+  const [value, setValue] = React.useState<boolean>(initialValue === true)
+  const setTrue = React.useCallback(() => setValue(true), [])
+  const setFalse = React.useCallback(() => setValue(false), [])
+  const toggle = React.useCallback(() => setValue((value) => !value), [])
+  return [value, setTrue, setFalse, toggle]
+}
+
+```
+
+---
+
+## JavaScript Future
+
+---
+
+The Third Age of JavaScript: https://www.swyx.io/js-third-age/
+
+![Third age of JS](assets/third-age-of-js.png)
+
+---
+
+In summary: Third Age JS tools will be:
+
+- Faster
+- ESM first
+- Collapsed Layers (One thing doing many things well instead of many things doing one thing well)
+- Typesafe-er (built with a strongly typed language at core, and supporting TS in user code with zero config)
+- Secure-er (from dependency attacks, or lax permissions)
+- Polyglot
+- Neo-Isomorphic (recognizing that much, if not most, JS should run first at buildtime or on server-side before ever reaching the client)
+
+The result of all of this work is both a better developer experience (faster builds, industry standard tooling) and user experience (smaller bundles, faster
+feature delivery). It is the final metamorphosis of JavaScript from site scripting toy language to full application platform.
+
+---
+Interesting projects to track
+
+- ESBuild
+  https://esbuild.github.io/
+
+- Parcel
+  https://parceljs.org/
+
+- Rome  ( one tool for everything )
+  https://rome.tools/
+
+- WMR
+  https://github.com/preactjs/wmr
+
+- Estrella
+  https://github.com/rsms/estrella
+
+---
+
+## React / Vue / Angular / Svelte
+
+---
+
+![width:400px](assets/vue_react.png)
+
+---
+
+### React / Vue - list rendering
+
+```js
+function NumberList (props) {
+  const numbers = props.numbers;
+  const listItems = numbers.map((number) => <li>{number}</li>);
+
+  return (
+    <ul>{listItems}</ul>
+  );
+}
+```
+
+```html
+
+<ul id="example-1">
+  <li v-for="item in items"
+      :key="item.message">
+    {{ item.message }}
+  </li>
+</ul>
+```
+
+--- 
+
+### React / Vue - conditional rendering
+
+```js
+function Greeting (props) {
+  const isLoggedIn = props.isLoggedIn;
+  if (isLoggedIn) {
+    return <UserGreeting/>;
+  }
+  return <GuestGreeting/>;
+}
+```
+
+```html
+<h1 v-if="awesome">Vue is awesome!</h1>
+```
+
+---
+
+```jsx
+<>
+  <h1>Cześć!</h1>{unreadMessages.length > 0 && <h2> Masz {unreadMessages.length} nieprzeczytanych wiadomości. </h2>}
+</>
+
+```
+
+```html
+
+<template v-if="ok">
+  <h1>Title</h1>
+  <p>Paragraph 1</p>
+  <p>Paragraph 2</p>
+</template>
+```
+
+---
+
+
+
+
 
 
 
