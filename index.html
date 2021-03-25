@@ -161,9 +161,10 @@ Excellent idea for bootstrapping projects/docs.</p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="25">
 <h4>Timeout zero</h4>
-<p>Skoro wiemy już, że możemy symulować asynchroniczność, to chcielibyśmy realizować to natychmiast, pomijając jakiekolwiek opóźnienie. Ustawiamy zatem 0ms, w<br />
-nadziei, że przekazana funkcja uruchomi się  &quot;od razu&quot;. Nawet jednak ustawienie 0ms nie zmienia sposobu działania JavaScript. Nie jest bowiem tak, że JS porzuci<br />
-wszystkie inne zadania i zajmie się naszym. Obowiązują reguły ustawiania się w kolejce. Nie uruchomi tez naszego zadania w osobnym wątku, bo nie potrafi.</p>
+<p>We know that we can simulate asynchronicity, we would like to do it immediately, ignoring any delay. So we set 0ms, and we hope the passed function will run &quot;immediately&quot;.</p>
+<p>However, even setting it to 0ms does not change the way JavaScript works.</p>
+<p>It is not that JS will abandon all other tasks and take care of the one.</p>
+<p>Queuing rules apply. It will also not start our task in a separate thread, because it cannot.</p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="26">
 <h4>Timeout zero - example</h4>

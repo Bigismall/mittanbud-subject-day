@@ -178,9 +178,14 @@ JavaScript basics: (https://github.com/Bigismall/js-basic)
 
 #### Timeout zero
 
-Skoro wiemy już, że możemy symulować asynchroniczność, to chcielibyśmy realizować to natychmiast, pomijając jakiekolwiek opóźnienie. Ustawiamy zatem 0ms, w
-nadziei, że przekazana funkcja uruchomi się  "od razu". Nawet jednak ustawienie 0ms nie zmienia sposobu działania JavaScript. Nie jest bowiem tak, że JS porzuci
-wszystkie inne zadania i zajmie się naszym. Obowiązują reguły ustawiania się w kolejce. Nie uruchomi tez naszego zadania w osobnym wątku, bo nie potrafi.
+
+We know that we can simulate asynchronicity, we would like to do it immediately, ignoring any delay. So we set 0ms, and we hope the passed function will run "immediately". 
+
+However, even setting it to 0ms does not change the way JavaScript works. 
+
+It is not that JS will abandon all other tasks and take care of the one. 
+
+Queuing rules apply. It will also not start our task in a separate thread, because it cannot.
 
 ---
 
