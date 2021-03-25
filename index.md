@@ -558,6 +558,10 @@ Interesting projects to track
 
 ![width:400px](assets/vue_react.png)
 
+------
+
+![React Svelte](assets/react-svelte.png)
+
 ---
 
 ### React / Vue - list rendering
@@ -620,6 +624,434 @@ function Greeting (props) {
 ```
 
 ---
+
+### Angular
+
+```html
+<h2>My Heroes</h2>
+<ul class="heroes">
+  <li *ngFor="let hero of heroes"
+      [class.selected]="hero === selectedHero"
+      (click)="onSelect(hero)">
+    <span class="badge">{{hero.id}}</span> {{hero.name}}
+  </li>
+</ul>
+
+<div *ngIf="selectedHero">
+
+  <h2>{{selectedHero.name | uppercase}} Details</h2>
+  <div><span>id: </span>{{selectedHero.id}}</div>
+  <div>
+    <label for="hero-name">Hero name:</label>
+    <input id="hero-name"
+           [(ngModel)]="selectedHero.name"
+           placeholder="name">
+  </div>
+
+</div>
+```
+
+---
+
+### Svelte
+
+---
+
+```html
+
+<script>
+  let name = 'world';
+</script>
+
+<style>
+  h1 {
+    color: purple;
+    font-family: 'Comic Sans MS', cursive;
+    font-size: 2em;
+  }
+</style>
+
+<h1>Hello {name}!</h1>
+
+```
+
+---
+
+```html
+<h1>Shopping list</h1>
+<ul>
+  {#each items as item}
+  <li>{item.name} x {item.qty}</li>
+  {/each}
+</ul>
+
+{#if porridge.temperature > 100}
+<p>too hot!</p>
+{:else if 80 > porridge.temperature}
+<p>too cold!</p>
+{:else}
+<p>just right!</p>
+{/if}
+```
+
+---
+
+## React hooks
+
+---
+
+Basic hooks
+
+- useState
+- useEffect
+- useContext
+
+Advanced hooks
+
+- useReducer
+- useLayoutEffect
+- useCallback
+- useMemo
+- useImperativeHandle
+- useDebugValue
+- useRef
+
+---
+
+### React useState
+
+```js
+
+const [state, setState] = useState(initialState);
+
+setState(newState);
+
+setState((prevState) => newState);    //much better
+
+```
+
+---
+The initialState argument is the state used during the initial render. In subsequent renders, it is disregarded.
+
+If the initial state is the result of an expensive computation, you may provide a function instead, which will be executed only on the initial render:
+
+```js
+const [state, setState] = useState(() => {
+  const initialState = someExpensiveComputation(props);
+  return initialState;
+});
+
+```
+
+---
+
+### React useEffect
+
+Same story as `timeout zero pattern`
+
+```jsx
+const App = () => {
+  console.log("Message BEFORE efect");
+
+  React.useEffect(() => {
+    console.log("Message IN efect");
+
+    return () => {
+      console.log("Message IN RETURN efect");
+    };
+  }, []);
+
+  console.log("Message AFTER effect");
+
+  return <div>Hello React..!</div>;
+};
+
+ReactDOM.render(<App />, document.getElementById("app"));
+```
+
+---
+
+```
+"Message BEFORE efect"
+
+"Message AFTER effect"
+
+"Message IN efect"
+```
+
+---
+
+### React useContext
+
+```js
+
+const themes = {
+  light: {
+    foreground: "#000000",
+    background: "#eeeeee"
+  },
+  dark: {
+    foreground: "#ffffff",
+    background: "#222222"
+  }
+};
+
+const ThemeContext = React.createContext(themes.light);
+
+function App() {
+  return (
+    <ThemeContext.Provider value={themes.dark}>
+      <Toolbar />
+    </ThemeContext.Provider>
+  );
+}
+
+function Toolbar(props) {
+  return (
+    <div>
+      <ThemedButton />
+    </div>
+  );
+}
+
+function ThemedButton() { //dark, because of value passed to provider
+  const theme = React.useContext(ThemeContext);
+  return (
+    <button style={{ background: theme.background, color: theme.foreground }}>
+      I am styled by theme context!
+    </button>
+  );
+}
+
+
+ReactDOM.render(<App />, document.getElementById("app"));
+
+```
+---
+```jsx
+<BugsnagErrorBoundary>
+  <AssetsLoader>
+    <SessionProvider>
+      <FeatureFlagsProvider config={featureFlagsAppConfig}>
+        <FnPortal.PortalHost>
+          <NavigationContainer theme={nativeTheme.navigation} onReady={() => console.log('NAVIGATION READY')}>
+            <AppNavigationStack />
+          </NavigationContainer>
+        </FnPortal.PortalHost>
+      </FeatureFlagsProvider>
+    </SessionProvider>
+  </AssetsLoader>
+</BugsnagErrorBoundary>
+```
+
+---
+```ts
+import React from 'react'
+
+import UserContextType from '@mittanbud-business/shared/src/utils/query/CurrentUser/CurrentUserQuery.interface'
+
+const UserContext = React.createContext<Partial<UserContextType>>({})
+
+export const UserProvider = UserContext.Provider
+
+export default UserContext
+
+```
+
+```tsx
+<SessionContext.Provider value={{ token, logout: logoutAction }}>
+  <ApolloProvider client={client}>
+    <UserProvider value={data?.me ?? null}>{children}</UserProvider>
+  </ApolloProvider>
+</SessionContext.Provider>
+
+```
+
+---
+![context](assets/context.png)
+
+---
+
+### React useReducer
+
+Please read about:
+
+- [Finite-state machine](https://en.wikipedia.org/wiki/Finite-state_machine)
+- [State pattern](https://en.wikipedia.org/wiki/State_pattern)
+- [State pattern JS](https://github.com/Bigismall/ecmascript-design-patterns/blob/master/stan.md)
+- [React Robot](https://thisrobot.life/integrations/react-robot.html)
+
+---
+
+```ts
+export const MessageTemplateReducerInit = (): MessageTemplatesState => ({
+  list: true,
+  listTypeEdit: false,
+  form: false,
+})
+
+const [templatesState, templatesDispatch] = React.useReducer(MessageTemplatesReducer, {}, MessageTemplateReducerInit)
+```
+
+---
+
+```ts
+export const MessageTemplatesReducer = (state: MessageTemplatesState, action: MessageTemplatesAction): MessageTemplatesState => {
+  switch (action.type) {
+    case MessageTemplatesActionType.RESET:
+      return MessageTemplateReducerInit()
+    case MessageTemplatesActionType.MESSAGES_LIST:
+      return {
+        list: true,
+        listTypeEdit: false,
+        form: false,
+      }
+    case MessageTemplatesActionType.MESSAGES_LIST_EDIT:
+      return {
+        list: true,
+        listTypeEdit: true,
+        form: false,
+      }
+    case MessageTemplatesActionType.MESSAGE_ADD:
+      return {
+        list: false,
+        listTypeEdit: false,
+        form: true,
+        answerTemplate: undefined,
+      }
+    case MessageTemplatesActionType.MESSAGE_EDIT:
+      return {
+        list: false,
+        listTypeEdit: true,
+        form: true,
+        answerTemplate: action.payload.answerTemplate,
+      }
+    case MessageTemplatesActionType.MESSAGE_DELETE:
+      return {
+        list: true,
+        listTypeEdit: true,
+        form: false,
+      }
+  }
+}
+
+```
+---
+
+![Opening hours](assets/opening-hours.png)
+
+---
+
+![Opening hours](assets/opening-hours-reducer.png)
+
+---
+
+## React useLayoutEffect
+
+
+ - `useLayoutEffect` - before commit phase
+ - `useLayoutEffect` - after commit phase
+
+
+The signature is identical to `useEffect`, but it fires synchronously after all DOM mutations. Use this to read layout from the DOM and synchronously re-render. Updates scheduled inside useLayoutEffect will be flushed synchronously, before the browser has a chance to paint.
+
+Prefer the standard useEffect when possible to avoid blocking visual updates.
+
+---
+
+#React useMemo
+
+```ts
+const memoizedValue = useMemo(() => computeExpensiveValue(a, b), [a, b]);
+```
+---
+
+```ts
+  const showInsufficientFundsAlert = React.useMemo(
+    () => data && !data.job.isAnswered && !data.job.isDeleted && data.job.answerAccess.code === GQLAnswerAccessCode.DENIED_INSUFFICIENT_FUNDS,
+    [data]
+  )
+  const showCompanyLacksSubscriptionAlert = React.useMemo(
+    () => data && !data.job.isAnswered && !data.job.isDeleted && data.job.answerAccess.code === GQLAnswerAccessCode.DENIED_COMPANY_LACKS_SUBSCRIPTION,
+    [data]
+  )
+
+  const allowComposeMessage = React.useMemo(() => data && !data.job.isAnswered && !data.job.isDeleted && data.job.answerAccess.isOpen && !answerJobData, [
+    data,
+    answerJobData,
+  ])
+```
+
+---
+
+#React useCallback
+
+```js
+const memoizedCallback = useCallback(
+  () => {
+    doSomething(a, b);
+  },
+  [a, b],
+);
+```
+---
+```ts
+
+  // initialize the api instance
+  const initState = React.useCallback(async () => {
+    const flagsClientInstance = new FeatureFlagsClient({ ...defaultConfig, ...config })
+    const initFF = await flagsClientInstance.init()
+
+    if (initFF) {
+      await setStore(flagsClientInstance.config.userId, flagsClientInstance.getFlags())
+    } else {
+      const localStorageFlags = await getStore(flagsClientInstance.config.userId)
+      dev.log('LOADING FEATURE FLAGS from Local storage')
+      flagsClientInstance.setFlags(Object.entries(localStorageFlags?.data ?? []).map(([, v]): FeatureFlagObject => v as FeatureFlagObject))
+    }
+
+    setFlagsClient(flagsClientInstance)
+  }, [defaultConfig, config])
+
+  // call the init on load
+  React.useEffect(() => {
+    initState()
+  }, [initState])
+
+```
+
+---
+
+- useImperativeHandle
+- useDebugValue
+- useRef
+
+---
+
+## Awesome React Hooks
+
+https://github.com/rehooks/awesome-react-hooks
+
+```js
+
+function useDocumentTitle(title, retainOnUnmount = false) {
+  const defaultTitle = useRef(document.title);
+
+  useEffect(() => {
+    document.title = title;
+  }, [title]);
+
+  useEffect(() => {
+    return () => {
+      if (!retainOnUnmount) {
+        document.title = defaultTitle.current;
+      }
+    };
+  }, []);
+}
+```
+
+
 
 
 
