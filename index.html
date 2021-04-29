@@ -233,8 +233,39 @@ Excellent idea for bootstrapping projects/docs.</p>
 <h3>CSS custom properties (a.k.a variables)</h3>
 <p>See presentation: (<a href="https://docs.google.com/presentation/d/1XffJxDlG5XSxT8MnXfQKUuf0xQ-MAxF9Bclvy6Fa3R8/edit?usp=sharing">https://docs.google.com/presentation/d/1XffJxDlG5XSxT8MnXfQKUuf0xQ-MAxF9Bclvy6Fa3R8/edit?usp=sharing</a>)</p>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="24"></section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="24">
+<h4>Usage</h4>
+<pre><code class="language-css"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>
+<span class="hljs-comment">/* Declaration */</span>
+<span class="hljs-selector-pseudo">:root</span> {
+  --<span class="hljs-selector-tag">main</span>-bg-<span class="hljs-attribute">color</span>: brown;
+}
+<span class="hljs-comment">/*Usage */</span> 
+<span class="hljs-selector-tag">button</span> {
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">var</span>(--main-bg-color);
+}
+
+</span></span></foreignObject></svg></code></pre>
+</section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="25">
+<p><img src="assets/css_variables_example.png" alt="CSS VARIABLES Example" /></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="26">
+<p><img src="assets/css_variables_usage.png" alt="css variables usage" /></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="27">
+<h4>Usage with JavaScript</h4>
+<pre><code class="language-javascript"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>
+<span class="hljs-comment">//get inline defined styles</span>
+element.style.getPropertyValue(<span class="hljs-string">&quot;--schibsted-brand-background&quot;</span>);
+<span class="hljs-comment">//get computed styles</span>
+getComputedStyle(element).getPropertyValue(<span class="hljs-string">&quot;--schibsted-brand-color&quot;</span>);
+
+<span class="hljs-comment">// set variable on inline style</span>
+element.style.setProperty(<span class="hljs-string">&quot;--schibsted-brand-color&quot;</span>,<span class="hljs-string">&quot;#00508E&quot;</span>);
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="28">
 <h3>New features in CSS ?</h3>
 <ul>
 <li>css variables</li>
@@ -250,42 +281,42 @@ Excellent idea for bootstrapping projects/docs.</p>
 <li>css <code>aspect-ratio</code> <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/aspect-ratio">https://developer.mozilla.org/en-US/docs/Web/CSS/aspect-ratio</a></li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="26">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="29">
 <h2>JavaScript</h2>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="27">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="30">
 <p><img src="assets/js-in-one-pic.png" alt="width:300px" style="width:300px;" /></p>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="28">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="31">
 <h3>Books</h3>
 <p><a href="https://github.com/chocopuff2020/javascript-ebooks-1">Github Repository</a></p>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="29">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="32">
 <p><a href="https://github.com/chocopuff2020/javascript-ebooks-1/blob/master/%5BJavaScript%20The%20Good%20Parts%201st%20Edition%20by%20Douglas%20Crockford%20-%202008%5D.pdf">Good parts</a></p>
 <p><img src="assets/js-good-parts.jpg" alt="Good parts" /></p>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="30">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="33">
 <p><img src="assets/js-vs-js-goodparts.jpg" alt="JS vs good parts" /></p>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="31">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="34">
 <p><a href="http://sd.blackball.lv/library/JavaScript_Patterns_%282010%29.pdf">JavaScript Patterns</a></p>
 <p><img src="assets/js-patterns.png" alt="JavaScript Patterns" /></p>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="32">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="35">
 <p><img src="assets/book-shelf.jpg" alt="My bookshelf" /></p>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="33">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="36">
 <h3>My Book</h3>
 <p>JavaScript basics: (<a href="https://github.com/Bigismall/js-basic">https://github.com/Bigismall/js-basic</a>)</p>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="34">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="37">
 <h4>Timeout zero</h4>
-<p>We know that we can simulate asynchronicity, we would like to do it immediately, ignoring any delay. So we set 0ms, and we hope the passed function will run &quot;immediately&quot;.</p>
-<p>However, even setting it to 0ms does not change the way JavaScript works.</p>
+<p>We know that we can simulate asynchronicity, we would like to do it immediately, ignoring any delay. So we set <code>0ms</code>, and we hope the passed function will run <code>immediately</code>.</p>
+<p>However, even setting it to <code>0ms</code> does not change the way JavaScript works.</p>
 <p>It is not that JS will abandon all other tasks and take care of the one.</p>
-<p>Queuing rules apply. It will also not start our task in a separate thread, because it cannot.</p>
+<p><strong>Queuing rules apply</strong>. It will also not start our task in a separate thread, because it cannot.</p>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="35">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="38">
 <h4>Timeout zero - example</h4>
 <pre><code class="language-js"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
   <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;START&quot;</span>);
@@ -306,7 +337,7 @@ Excellent idea for bootstrapping projects/docs.</p>
 </span></span></foreignObject></svg></code></pre>
 <p><a href="https://codepen.io/Bigismall/pen/LLZGax">https://codepen.io/Bigismall/pen/LLZGax</a></p>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="36">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="39">
 <h4>Timeout zero - result</h4>
 <pre><code class="language-text"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap> START
  MESSAGE
@@ -318,16 +349,16 @@ Excellent idea for bootstrapping projects/docs.</p>
 queue.</p>
 <p>So  <code>setTimeOut(function,0)</code>  says - <em>execute this function as soon as it is possible</em>.</p>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="37">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="40">
 <h3>JavaScript gotchas!</h3>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="38">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="41">
 <h4>Automatic type conversion</h4>
 <pre><code class="language-js"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-built_in">console</span>.log([<span class="hljs-number">1</span>, <span class="hljs-number">5</span>, <span class="hljs-number">20</span>, <span class="hljs-number">10</span>].sort()) <span class="hljs-comment">//[ 1, 10, 20, 5 ]</span>
 </span></span></foreignObject></svg></code></pre>
 <p><a href="https://codepen.io/Bigismall/pen/gRMPye">https://codepen.io/Bigismall/pen/gRMPye</a></p>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="39">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="42">
 <h4>Are the numbers equal?</h4>
 <pre><code class="language-js"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">var</span> a = <span class="hljs-number">0.1</span>,
     b = <span class="hljs-number">0.2</span>,
@@ -344,7 +375,7 @@ queue.</p>
 </span></span></foreignObject></svg></code></pre>
 <p><a href="https://codepen.io/Bigismall/pen/XgKXwb">https://codepen.io/Bigismall/pen/XgKXwb</a></p>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="40">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="43">
 <h4>To string evaluation</h4>
 <pre><code class="language-js"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">var</span> a = <span class="hljs-number">1</span>,
     b = <span class="hljs-string">&quot;2&quot;</span>,
@@ -360,7 +391,7 @@ queue.</p>
 </span></span></foreignObject></svg></code></pre>
 <p><a href="https://codepen.io/Bigismall/pen/OgXMYE">https://codepen.io/Bigismall/pen/OgXMYE</a></p>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="41">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="44">
 <h4>Type of  trap</h4>
 <pre><code class="language-js"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">typeof</span> {} === <span class="hljs-string">&quot;object&quot;</span> <span class="hljs-comment">//true</span>
 <span class="hljs-keyword">typeof</span> <span class="hljs-string">&quot;&quot;</span> === <span class="hljs-string">&quot;string&quot;</span> <span class="hljs-comment">//true</span>
@@ -368,15 +399,15 @@ queue.</p>
 </span></span></foreignObject></svg></code></pre>
 <p><a href="https://codepen.io/Bigismall/pen/gRMPNz">https://codepen.io/Bigismall/pen/gRMPNz</a></p>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="42">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="45">
 <h4>Math min and max values</h4>
 <pre><code class="language-js"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">Math</span>.max()); <span class="hljs-comment">// -Infinity</span>
 <span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">Math</span>.min()); <span class="hljs-comment">// Infinity</span>
 </span></span></foreignObject></svg></code></pre>
 <p><a href="https://codepen.io/Bigismall/pen/dRXGxR">https://codepen.io/Bigismall/pen/dRXGxR</a></p>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="43"></section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="44">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="46"></section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="47">
 <h4>TimeOut Sort</h4>
 <pre><code class="language-js"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">var</span> numbers = [<span class="hljs-number">38</span>, <span class="hljs-number">43</span>, <span class="hljs-number">33</span>, <span class="hljs-number">43</span>, <span class="hljs-number">27</span>, <span class="hljs-number">20</span>, <span class="hljs-number">33</span>, <span class="hljs-number">17</span>, <span class="hljs-number">49</span>, <span class="hljs-number">11</span>, <span class="hljs-number">30</span>, <span class="hljs-number">27</span>, <span class="hljs-number">35</span>, <span class="hljs-number">42</span>, <span class="hljs-number">14</span>, <span class="hljs-number">32</span>, <span class="hljs-number">44</span>, <span class="hljs-number">44</span>, <span class="hljs-number">16</span>, <span class="hljs-number">44</span>];
 
@@ -390,7 +421,7 @@ numbers.forEach(<span class="hljs-function"><span class="hljs-keyword">function<
 </span></span></foreignObject></svg></code></pre>
 <p><a href="https://codepen.io/Bigismall/pen/QgEyoY">https://codepen.io/Bigismall/pen/QgEyoY</a></p>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="45">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="48">
 <pre><code class="language-text"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>11
 14
 16
@@ -413,20 +444,20 @@ numbers.forEach(<span class="hljs-function"><span class="hljs-keyword">function<
 49
 </span></span></foreignObject></svg></code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="46">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="49">
 <h3>JS Interview questions</h3>
 <ul>
 <li><a href="https://dev.to/macmacky/70-javascript-interview-questions-5gfi">https://dev.to/macmacky/70-javascript-interview-questions-5gfi</a></li>
 <li><a href="https://skilled.dev/course/javascript-interview-questions">https://skilled.dev/course/javascript-interview-questions</a></li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="47">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="50">
 <h3>JS killer question</h3>
 <p>Define the <code>even</code> method. Called on given array it should return just <em>even</em> numbers</p>
 <pre><code class="language-js"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>].even()  <span class="hljs-comment">// 2,4,6,8</span>
 </span></span></foreignObject></svg></code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="48">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="51">
 <pre><code class="language-js"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>
 <span class="hljs-keyword">if</span> (!<span class="hljs-built_in">Array</span>.prototype.even) {
   <span class="hljs-comment">// won&#x27;t work because of arrow function</span>
@@ -439,14 +470,14 @@ numbers.forEach(<span class="hljs-function"><span class="hljs-keyword">function<
 <span class="hljs-built_in">console</span>.log([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>, <span class="hljs-number">0</span>].even());
 </span></span></foreignObject></svg></code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="49">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="52">
 <h3>Awesome JavaScript</h3>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/API">https://developer.mozilla.org/en-US/docs/Web/API</a></p>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="50">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="53">
 <p><img src="assets/web_apis.png" alt="WEB APIS" /></p>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="51">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="54">
 <h4>Speach API</h4>
 <ul>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API</a></li>
@@ -455,7 +486,7 @@ numbers.forEach(<span class="hljs-function"><span class="hljs-keyword">function<
 <li><a href="https://codepen.io/Bigismall/pen/rNjOVyr">https://codepen.io/Bigismall/pen/rNjOVyr</a></li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="52">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="55">
 <pre><code class="language-js"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>
 <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&quot;#magic&quot;</span>).addEventListener(<span class="hljs-string">&quot;click&quot;</span>, <span class="hljs-function">() =&gt;</span> {
   <span class="hljs-keyword">const</span> paragraphs = [...document.querySelectorAll(<span class="hljs-string">&quot;#article p&quot;</span>)];
@@ -480,7 +511,7 @@ numbers.forEach(<span class="hljs-function"><span class="hljs-keyword">function<
 
 </span></span></foreignObject></svg></code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="53">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="56">
 <h4>Shape (Text/BarCode/Face) Detection API</h4>
 <ul>
 <li>
@@ -497,7 +528,7 @@ numbers.forEach(<span class="hljs-function"><span class="hljs-keyword">function<
 </li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="54">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="57">
 <h4>Observers</h4>
 <ul>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Resize_Observer_API">https://developer.mozilla.org/en-US/docs/Web/API/Resize_Observer_API</a></li>
@@ -505,13 +536,13 @@ numbers.forEach(<span class="hljs-function"><span class="hljs-keyword">function<
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver">https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver</a></li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="55">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="58">
 <h4>EcmaScript modules</h4>
 <ul>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules</a></li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="56">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="59">
 <pre><code class="language-html"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>
 <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;module&quot;</span>&gt;</span><span class="javascript">
   <span class="hljs-keyword">import</span> detectFace <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;./js/detect.mjs&quot;</span>;
@@ -525,7 +556,7 @@ numbers.forEach(<span class="hljs-function"><span class="hljs-keyword">function<
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 </span></span></foreignObject></svg></code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="57">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="60">
 <pre><code class="language-js"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">const</span> options = {
   <span class="hljs-attr">fastMode</span>        : <span class="hljs-literal">true</span>,
   <span class="hljs-attr">maxDetectedFaces</span>: <span class="hljs-number">10</span>,
@@ -541,14 +572,14 @@ numbers.forEach(<span class="hljs-function"><span class="hljs-keyword">function<
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> detectFace;
 </span></span></foreignObject></svg></code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="58">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="61">
 <h4>JavaScript and frontend features ...</h4>
 <p>Do you want to be up to date? <a href="https://frontendfront.com/">https://frontendfront.com/</a></p>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="59">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="62">
 <h2>TypeScript</h2>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="60">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="63">
 <p>Docs</p>
 <ul>
 <li><a href="https://www.typescriptlang.org/docs/">https://www.typescriptlang.org/docs/</a></li>
@@ -558,7 +589,7 @@ numbers.forEach(<span class="hljs-function"><span class="hljs-keyword">function<
 <li><a href="https://www.typescriptlang.org/play?target=1&amp;jsx=0#code/MYGwhgzhAEC2CWAXRYB2AjArgE2gbwFgAoaaAB03RHmGlTFgFMAuaCRAJ3lQHNjTgAe1TsOmYIkEcAFAEp8-UtEQALeBAB09JtAC80AEQBZAIIHFAX2LEVjECEFyFJaB0aJMHVNAAGACTsHaAASPFV1LQZGCx9iKyI46wSiIRFEODA9OkYAdzgkFAwcOWJUiEEQRg0HHmlYMA1be0dZWWIgA">https://www.typescriptlang.org/play</a></li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="61">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="64">
 <pre><code class="language-ts"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>
 <span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;react&#x27;</span>
 
@@ -581,14 +612,14 @@ numbers.forEach(<span class="hljs-function"><span class="hljs-keyword">function<
 
 </span></span></foreignObject></svg></code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="62">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="65">
 <h2>JavaScript Future</h2>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="63">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="66">
 <p>The Third Age of JavaScript: <a href="https://www.swyx.io/js-third-age/">https://www.swyx.io/js-third-age/</a></p>
 <p><img src="assets/third-age-of-js.png" alt="Third age of JS" /></p>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="64">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="67">
 <p>In summary: Third Age JS tools will be:</p>
 <ul>
 <li>Faster</li>
@@ -602,7 +633,7 @@ numbers.forEach(<span class="hljs-function"><span class="hljs-keyword">function<
 <p>The result of all of this work is both a better developer experience (faster builds, industry standard tooling) and user experience (smaller bundles, faster<br />
 feature delivery). It is the final metamorphosis of JavaScript from site scripting toy language to full application platform.</p>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="65">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="68">
 <p>Interesting projects to track</p>
 <ul>
 <li>
@@ -627,16 +658,16 @@ feature delivery). It is the final metamorphosis of JavaScript from site scripti
 </li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="66">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="69">
 <h2>React / Vue / Angular / Svelte</h2>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="67">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="70">
 <p><img src="assets/vue_react.png" alt="width:400px" style="width:400px;" /></p>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="68">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="71">
 <p><img src="assets/react-svelte.png" alt="React Svelte" /></p>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="69">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="72">
 <h3>React / Vue - list rendering</h3>
 <pre><code class="language-js"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">NumberList</span> (<span class="hljs-params">props</span>) </span>{
   <span class="hljs-keyword">const</span> numbers = props.numbers;
@@ -656,7 +687,7 @@ feature delivery). It is the final metamorphosis of JavaScript from site scripti
 <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
 </span></span></foreignObject></svg></code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="70">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="73">
 <h3>React / Vue - conditional rendering</h3>
 <pre><code class="language-js"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Greeting</span> (<span class="hljs-params">props</span>) </span>{
   <span class="hljs-keyword">const</span> isLoggedIn = props.isLoggedIn;
@@ -669,7 +700,7 @@ feature delivery). It is the final metamorphosis of JavaScript from site scripti
 <pre><code class="language-html"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">v-if</span>=<span class="hljs-string">&quot;awesome&quot;</span>&gt;</span>Vue is awesome!<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
 </span></span></foreignObject></svg></code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="71">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="74">
 <pre><code class="language-jsx"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>&lt;&gt;
   <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Cześć!<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span></span>{unreadMessages.length &gt; <span class="hljs-number">0</span> &amp;&amp; <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span> Masz {unreadMessages.length} nieprzeczytanych wiadomości. <span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span></span>}
 &lt;/&gt;
@@ -683,7 +714,7 @@ feature delivery). It is the final metamorphosis of JavaScript from site scripti
 <span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
 </span></span></foreignObject></svg></code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="72">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="75">
 <h3>Angular</h3>
 <pre><code class="language-html"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>My Heroes<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;heroes&quot;</span>&gt;</span>
@@ -708,10 +739,10 @@ feature delivery). It is the final metamorphosis of JavaScript from site scripti
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 </span></span></foreignObject></svg></code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="73">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="76">
 <h2>React hooks</h2>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="74">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="77">
 <p>Basic hooks</p>
 <ul>
 <li>useState</li>
@@ -728,7 +759,7 @@ feature delivery). It is the final metamorphosis of JavaScript from site scripti
 <li>useDebugValue</li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="75">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="78">
 <h3>React useState</h3>
 <pre><code class="language-js"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>
 <span class="hljs-keyword">const</span> [state, setState] = useState(initialState);
@@ -739,7 +770,7 @@ setState(<span class="hljs-function">(<span class="hljs-params">prevState</span>
 
 </span></span></foreignObject></svg></code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="76">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="79">
 <p>The initialState argument is the state used during the initial render. In subsequent renders, it is disregarded.</p>
 <p>If the initial state is the result of an expensive computation, you may provide a function instead, which will be executed only on the initial render:</p>
 <pre><code class="language-js"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">const</span> [state, setState] = useState(<span class="hljs-function">() =&gt;</span> {
@@ -749,7 +780,7 @@ setState(<span class="hljs-function">(<span class="hljs-params">prevState</span>
 
 </span></span></foreignObject></svg></code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="77">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="80">
 <h3>React useEffect</h3>
 <p>Same story as <code>timeout zero pattern</code></p>
 <pre><code class="language-jsx"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">const</span> App = <span class="hljs-function">() =&gt;</span> {
@@ -771,7 +802,7 @@ setState(<span class="hljs-function">(<span class="hljs-params">prevState</span>
 ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">App</span> /&gt;</span></span>, <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&quot;app&quot;</span>));
 </span></span></foreignObject></svg></code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="78">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="81">
 <pre><code><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>&quot;Message BEFORE efect&quot;
 
 &quot;Message AFTER effect&quot;
@@ -779,7 +810,7 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-n
 &quot;Message IN efect&quot;
 </span></span></foreignObject></svg></code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="79">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="82">
 <h3>React useContext</h3>
 <pre><code class="language-js"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>
 <span class="hljs-keyword">const</span> themes = {
@@ -825,7 +856,7 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-n
 
 </span></span></foreignObject></svg></code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="80">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="83">
 <pre><code class="language-jsx"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>&lt;BugsnagErrorBoundary&gt;
   <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">AssetsLoader</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">SessionProvider</span>&gt;</span>
@@ -841,7 +872,7 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-n
 &lt;/BugsnagErrorBoundary&gt;
 </span></span></foreignObject></svg></code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="81">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="84">
 <pre><code class="language-ts"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;react&#x27;</span>
 
 <span class="hljs-keyword">import</span> UserContextType <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@mittanbud-business/shared/src/utils/query/CurrentUser/CurrentUserQuery.interface&#x27;</span>
@@ -861,10 +892,10 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-n
 
 </span></span></foreignObject></svg></code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="82">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="85">
 <p><img src="assets/context.png" alt="context" /></p>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="83">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="86">
 <h3>React useReducer</h3>
 <p>Please read about:</p>
 <ul>
@@ -874,7 +905,7 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-n
 <li><a href="https://thisrobot.life/integrations/react-robot.html">React Robot</a></li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="84">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="87">
 <pre><code class="language-ts"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> MessageTemplateReducerInit = (): <span class="hljs-function"><span class="hljs-params">MessageTemplatesState</span> =&gt;</span> ({
   <span class="hljs-attr">list</span>: <span class="hljs-literal">true</span>,
   <span class="hljs-attr">listTypeEdit</span>: <span class="hljs-literal">false</span>,
@@ -884,7 +915,7 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-n
 <span class="hljs-keyword">const</span> [templatesState, templatesDispatch] = React.useReducer(MessageTemplatesReducer, {}, MessageTemplateReducerInit)
 </span></span></foreignObject></svg></code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="85">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="88">
 <pre><code class="language-ts"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> MessageTemplatesReducer = (state: MessageTemplatesState, <span class="hljs-attr">action</span>: MessageTemplatesAction): <span class="hljs-function"><span class="hljs-params">MessageTemplatesState</span> =&gt;</span> {
   <span class="hljs-keyword">switch</span> (action.type) {
     <span class="hljs-keyword">case</span> MessageTemplatesActionType.RESET:
@@ -926,13 +957,13 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-n
 
 </span></span></foreignObject></svg></code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="86">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="89">
 <p><img src="assets/opening-hours.png" alt="Opening hours" /></p>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="87">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="90">
 <p><img src="assets/opening-hours-reducer.png" alt="Opening hours" /></p>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="88">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="91">
 <h2>React useLayoutEffect</h2>
 <ul>
 <li><code>useLayoutEffect</code> - before commit phase</li>
@@ -941,12 +972,12 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-n
 <p>The signature is identical to <code>useEffect</code>, but it fires synchronously after all DOM mutations. Use this to read layout from the DOM and synchronously re-render. Updates scheduled inside useLayoutEffect will be flushed synchronously, before the browser has a chance to paint.</p>
 <p>Prefer the standard useEffect when possible to avoid blocking visual updates.</p>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="89">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="92">
 <p>#React useMemo</p>
 <pre><code class="language-ts"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">const</span> memoizedValue = useMemo(<span class="hljs-function">() =&gt;</span> computeExpensiveValue(a, b), [a, b]);
 </span></span></foreignObject></svg></code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="90">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="93">
 <pre><code class="language-ts"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>  <span class="hljs-keyword">const</span> showInsufficientFundsAlert = React.useMemo(
     <span class="hljs-function">() =&gt;</span> data &amp;&amp; !data.job.isAnswered &amp;&amp; !data.job.isDeleted &amp;&amp; data.job.answerAccess.code === GQLAnswerAccessCode.DENIED_INSUFFICIENT_FUNDS,
     [data]
@@ -962,7 +993,7 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-n
   ])
 </span></span></foreignObject></svg></code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="91">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="94">
 <p>#React useCallback</p>
 <pre><code class="language-js"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">const</span> memoizedCallback = useCallback(
   <span class="hljs-function">() =&gt;</span> {
@@ -972,7 +1003,7 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-n
 );
 </span></span></foreignObject></svg></code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="92">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="95">
 <pre><code class="language-ts"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>
   <span class="hljs-comment">// initialize the api instance</span>
   <span class="hljs-keyword">const</span> initState = React.useCallback(<span class="hljs-keyword">async</span> () =&gt; {
@@ -997,13 +1028,13 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-n
 
 </span></span></foreignObject></svg></code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="93">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="96">
 <ul>
 <li>useDebugValue</li>
 <li>useRef</li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="94">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="97">
 <h2>Awesome React Hooks</h2>
 <p><a href="https://github.com/rehooks/awesome-react-hooks">https://github.com/rehooks/awesome-react-hooks</a></p>
 <pre><code class="language-js"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap>

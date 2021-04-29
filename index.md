@@ -256,8 +256,41 @@ Please use SCSS
 See presentation: (https://docs.google.com/presentation/d/1XffJxDlG5XSxT8MnXfQKUuf0xQ-MAxF9Bclvy6Fa3R8/edit?usp=sharing)
 
 ---
+#### Usage
 
+```css
 
+/* Declaration */
+:root {
+  --main-bg-color: brown;
+}
+/*Usage */ 
+button {
+  background-color: var(--main-bg-color);
+}
+
+```
+---
+
+![CSS VARIABLES Example](assets/css_variables_example.png)
+
+---
+
+![css variables usage](assets/css_variables_usage.png)
+
+---
+#### Usage with JavaScript
+
+```javascript
+
+//get inline defined styles
+element.style.getPropertyValue("--schibsted-brand-background");
+//get computed styles
+getComputedStyle(element).getPropertyValue("--schibsted-brand-color");
+
+// set variable on inline style
+element.style.setProperty("--schibsted-brand-color","#00508E");
+```
 
 ---
 
@@ -319,13 +352,13 @@ JavaScript basics: (https://github.com/Bigismall/js-basic)
 #### Timeout zero
 
 
-We know that we can simulate asynchronicity, we would like to do it immediately, ignoring any delay. So we set 0ms, and we hope the passed function will run "immediately". 
+We know that we can simulate asynchronicity, we would like to do it immediately, ignoring any delay. So we set `0ms`, and we hope the passed function will run `immediately`. 
 
-However, even setting it to 0ms does not change the way JavaScript works. 
+However, even setting it to `0ms` does not change the way JavaScript works. 
 
 It is not that JS will abandon all other tasks and take care of the one. 
 
-Queuing rules apply. It will also not start our task in a separate thread, because it cannot.
+**Queuing rules apply**. It will also not start our task in a separate thread, because it cannot.
 
 ---
 
