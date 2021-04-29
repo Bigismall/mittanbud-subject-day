@@ -136,7 +136,9 @@ There are five types of categories:
 
 ---
 
-#####separate structure and style
+##### Separate structure and style
+
+Prepare separated set od styles for structure (layout) and components (buttons, form inputs, etc...)
  
 ```css
 .btn {
@@ -153,17 +155,20 @@ There are five types of categories:
   background: #47c4ff;
 }
 
-.btn-cancel: {
+.btn-cancel {
   background: #b5b5b5;
   color: #fff;
 }
 ```
+---
 ```html
 <button class="btn btn-primary">Submit</button>
 <button class="btn btn-cancel">Cancel</button>
 ```
 
-#####separate container and content
+---
+
+##### separate container and content
 
 ```css
 .meta h1 {
@@ -483,7 +488,6 @@ console.log(Math.min()); // Infinity
 
 [https://codepen.io/Bigismall/pen/dRXGxR](https://codepen.io/Bigismall/pen/dRXGxR)
 
----
 
 ---
 
