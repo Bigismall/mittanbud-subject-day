@@ -21,11 +21,12 @@
 
 ### CSS Frameworks (https://github.com/troxler/awesome-css-frameworks)
 
-- Bootstrap
-- Foundation
-- TailWind
-- Semantic UI, Bulma
-- Water.css
+- Bootstrap   (https://getbootstrap.com/)
+- Foundation (https://get.foundation/)
+- TailWind  (https://tailwindcss.com/)
+- Semantic UI  (https://semantic-ui.com/)
+- Bulma   (https://bulma.io/)
+- Water.css (https://watercss.kognise.dev/)
 
 ---
 
@@ -62,7 +63,46 @@ design? We have to change the whole application views!
 No class CSS - mean no conflicts and nothing to learn. Just use pure HTML and water will do the rest!
 Excellent idea for bootstrapping projects/docs.
 
-See (https://watercss.kognise.dev/)
+---
+```css
+
+button {
+  transition:
+    background-color 0.1s linear,
+    border-color 0.1s linear,
+    color 0.1s linear,
+    box-shadow 0.1s linear,
+    transform 0.1s ease;
+  transition:
+    background-color var(--animation-duration) linear,
+    border-color var(--animation-duration) linear,
+    color var(--animation-duration) linear,
+    box-shadow var(--animation-duration) linear,
+    transform var(--animation-duration) ease;
+}
+
+@media (prefers-color-scheme: dark) {
+
+  button {
+  transition:
+    background-color 0.1s linear,
+    border-color 0.1s linear,
+    color 0.1s linear,
+    box-shadow 0.1s linear,
+    transform 0.1s ease;
+  transition:
+    background-color var(--animation-duration) linear,
+    border-color var(--animation-duration) linear,
+    color var(--animation-duration) linear,
+    box-shadow var(--animation-duration) linear,
+    transform var(--animation-duration) ease;
+  }
+}
+```
+
+---
+
+![Water CSS](assets/water_css.png)
 
 ---
 
@@ -70,18 +110,114 @@ See (https://watercss.kognise.dev/)
 
 Read more (https://dev.to/ziizium/css-naming-conventions-5gd6)
 
-- BEM
-- SMACSS
-- ITCSS
-- OOCSS ()
-- AMCSS
+
+- SMACSS ( Scalable and Modular Architecture for CSS )
+- OOCSS ( Object-oriented CSS )
 - Storytelling CSS Class Names
+- BEM ( Block Element Modifier )
+
+---
+#### SMACSS (Scalable and Modular Architecture for CSS )
+
+
+At the very core of SMACSS is categorization. By categorizing CSS rules, we begin to see patterns and can define better practices around each of these patterns.
+
+There are five types of categories:
+
+- Base
+- Layout
+- Module
+- State
+- Theme
 
 ---
 
-#### BEM
+#### OOCSS ( Object-oriented CSS )
 
-Block Element Modifier (http://getbem.com/)
+---
+
+#####separate structure and style
+ 
+```css
+.btn {
+  display: inline-block;
+  text-align: center;
+  border-radius: 3px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color: #000;
+  padding: 5px 10px;
+}
+
+.btn-primary {
+  background: #47c4ff;
+}
+
+.btn-cancel: {
+  background: #b5b5b5;
+  color: #fff;
+}
+```
+```html
+<button class="btn btn-primary">Submit</button>
+<button class="btn btn-cancel">Cancel</button>
+```
+
+#####separate container and content
+
+```css
+.meta h1 {
+  font-size: 1em;
+}
+
+.post h1 {
+  font-size: 1.2em;
+}
+```
+
+VS 
+
+```css
+h1 {
+  font-size: 1em;
+}
+
+h1.post-header {
+  font-size: 1.2em;
+}
+```
+---
+
+See Bootstrap source code:   https://github.com/twbs/bootstrap/blob/main/scss/_buttons.scss
+
+---
+#### Storytelling CSS Class Names
+
+Sometimes I run into situations where I need additional CSS class names to manipulate the styles. When that happens, I categorize those situations into typical types and I give every type of them a prefix class-name, which represents that type.
+
+---
+```html
+<div class="common-message           "> <!-- Gray  Message --></div>
+<div class="common-message is-approved"><!-- Green Message --></div>
+<div class="common-message is-error  "> <!-- Red   Message --></div>
+<div class="common-message is-alert  "> <!--Yellow Message --></div>
+```
+
+```scss
+
+.common-message{ 
+    /*component styles*/ 
+    &.is-approved { color:green; }    
+    &.is-error    { color:red; }    
+    &.is-alert    { color:yellow; }    
+}
+
+```
+
+---
+#### BEM ( Block Element Modifier )
+
+http://getbem.com/
 ---
 
 ![BEM](assets/bem_introduction.png)
@@ -110,7 +246,7 @@ Do not apply HTML structures into BEM structure!
 Please use SCSS
 
 - https://www.sassmeister.com/
-- IDE (scss watchers)
+- IDE (scss file watchers)
 - http://koala-app.com/
 
 ---
@@ -118,6 +254,10 @@ Please use SCSS
 ### CSS custom properties (a.k.a variables)
 
 See presentation: (https://docs.google.com/presentation/d/1XffJxDlG5XSxT8MnXfQKUuf0xQ-MAxF9Bclvy6Fa3R8/edit?usp=sharing)
+
+---
+
+
 
 ---
 
@@ -193,21 +333,21 @@ Queuing rules apply. It will also not start our task in a separate thread, becau
 
 ```js
 (function () {
+  console.log("START");
 
-  console.log('this is the start');
-
-  setTimeout(function callBackOne () {
-    console.log('this is a msg from call back one');
+  setTimeout(function callBackOne() {
+    console.log("CALLBACK 1");
   });
 
-  console.log('this is just a message');
+  console.log("MESSAGE");
 
-  setTimeout(function callBackTwo () {
-    console.log('this is a msg from call back two');
-  }, 0);
+  setTimeout(function callBackTwo() {
+    console.log("CALLBACK 2");
+  },0);
 
-  console.log('this is the end');
+  console.log("END");
 })();
+
 ```
 
 [https://codepen.io/Bigismall/pen/LLZGax](https://codepen.io/Bigismall/pen/LLZGax)
@@ -216,12 +356,12 @@ Queuing rules apply. It will also not start our task in a separate thread, becau
 
 #### Timeout zero - result
 
-```
-this is the start
-this is just a message
-this is the end
-this is a msg from call back one
-this is a msg from call back two
+```text
+ START
+ MESSAGE
+ END
+ CALLBACK 1
+ CALLBACK 2
 ```
 
 As you can see  `callBackOne()`  and `callBackTwo()`  were called with `0ms` param (or without any parameter), and their execution was moved to the end of the
@@ -233,24 +373,6 @@ So  `setTimeOut(function,0)`  says - *execute this function as soon as it is pos
 ---
 
 ### JavaScript gotchas!
-
----
-
-#### TimeOut Sort
-
-```js
-var numbers = [38, 43, 33, 43, 27, 20, 33, 17, 49, 11, 30, 27, 35, 42, 14, 32, 44, 44, 16, 44];
-
-numbers.forEach(function (number) {
-  (function (number) {
-    setTimeout(function () {
-      console.log(number)
-    }, number);
-  }(number));
-});
-```
-
-[https://codepen.io/Bigismall/pen/QgEyoY](https://codepen.io/Bigismall/pen/QgEyoY)
 
 ---
 
@@ -327,6 +449,51 @@ console.log(Math.min()); // Infinity
 ```
 
 [https://codepen.io/Bigismall/pen/dRXGxR](https://codepen.io/Bigismall/pen/dRXGxR)
+
+---
+
+---
+
+#### TimeOut Sort
+
+```js
+var numbers = [38, 43, 33, 43, 27, 20, 33, 17, 49, 11, 30, 27, 35, 42, 14, 32, 44, 44, 16, 44];
+
+numbers.forEach(function (number) {
+  (function (number) {
+    setTimeout(function () {
+      console.log(number)
+    }, number);
+  }(number));
+});
+```
+
+[https://codepen.io/Bigismall/pen/QgEyoY](https://codepen.io/Bigismall/pen/QgEyoY)
+
+---
+
+```text
+11
+14
+16
+17
+20
+27
+27
+30
+32
+33
+33
+35
+38
+42
+43
+43
+44
+44
+44
+49
+```
 
 ---
 
@@ -466,9 +633,7 @@ export default detectFace;
 
 ---
 
-#### Ecmascript 6 and later...
-
-https://github.com/Bigismall/js-path-es-6/blob/master/SUMMARY.md
+#### JavaScript and frontend features ...
 
 Do you want to be up to date? https://frontendfront.com/
 
@@ -658,49 +823,6 @@ function Greeting (props) {
 
 ---
 
-### Svelte
-
----
-
-```html
-
-<script>
-  let name = 'world';
-</script>
-
-<style>
-  h1 {
-    color: purple;
-    font-family: 'Comic Sans MS', cursive;
-    font-size: 2em;
-  }
-</style>
-
-<h1>Hello {name}!</h1>
-
-```
-
----
-
-```html
-<h1>Shopping list</h1>
-<ul>
-  {#each items as item}
-  <li>{item.name} x {item.qty}</li>
-  {/each}
-</ul>
-
-{#if porridge.temperature > 100}
-<p>too hot!</p>
-{:else if 80 > porridge.temperature}
-<p>too cold!</p>
-{:else}
-<p>just right!</p>
-{/if}
-```
-
----
-
 ## React hooks
 
 ---
@@ -717,9 +839,8 @@ Advanced hooks
 - useLayoutEffect
 - useCallback
 - useMemo
-- useImperativeHandle
-- useDebugValue
 - useRef
+- useDebugValue
 
 ---
 
@@ -1027,7 +1148,6 @@ const memoizedCallback = useCallback(
 
 ---
 
-- useImperativeHandle
 - useDebugValue
 - useRef
 
@@ -1055,12 +1175,3 @@ function useDocumentTitle(title, retainOnUnmount = false) {
   }, []);
 }
 ```
-
-
-
-
-
-
-
-
-
