@@ -146,7 +146,7 @@
     "ms": "2.0.0",
     "nanoid": "3.1.22",
     "negotiator": "0.6.2",
-    "node-fetch": "2.6.1",
+    "node-fetch": "3.1.1",
     "node-releases": "1.1.71",
     "normalize-path": "3.0.0",
     "on-finished": "2.3.0",
