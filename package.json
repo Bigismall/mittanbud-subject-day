@@ -144,7 +144,7 @@
     "mkdirp": "0.5.5",
     "mkdirp-classic": "0.5.3",
     "ms": "2.0.0",
-    "nanoid": "3.1.22",
+    "nanoid": "3.1.31",
     "negotiator": "0.6.2",
     "node-fetch": "2.6.1",
     "node-releases": "1.1.71",
