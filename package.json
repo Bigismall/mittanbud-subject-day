@@ -165,7 +165,7 @@
     "pend": "1.2.0",
     "picomatch": "2.2.3",
     "pkg-dir": "4.2.0",
-    "postcss": "8.2.13",
+    "postcss": "8.4.31",
     "postcss-minify-params": "5.0.0",
     "postcss-minify-selectors": "5.0.0",
     "postcss-normalize-whitespace": "5.0.0",
